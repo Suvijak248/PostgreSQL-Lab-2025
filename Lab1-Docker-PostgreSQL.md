@@ -489,7 +489,9 @@ INSERT INTO hr.employee_orders (employee_id, customer_id, order_date, commission
 
 1. ผลการสร้าง schemas (\dn+)
 <img width="1046" height="264" alt="image" src="https://github.com/user-attachments/assets/402201b5-712b-42ab-95f3-c8995839c78e" />
+
 2. ผลการสร้างตารางในแต่ละ schema
+
 <img width="472" height="369" alt="image" src="https://github.com/user-attachments/assets/dd185d02-6ee0-46ec-af93-500b5489f788" />
 <img width="1081" height="709" alt="image" src="https://github.com/user-attachments/assets/8f0d1397-1f29-479e-92a3-e4b05cbcc4ef" />
 
