@@ -621,7 +621,7 @@ docker run --name postgres-backup-test \
 <img width="1284" height="128" alt="image" src="https://github.com/user-attachments/assets/5f35166d-e258-4a8b-843b-dc653772b7cb" />
 
 3. ผลการสร้าง container พร้อม bind mount
-```
+
 
 ## การตรวจสอบผลงานและ Performance
 
