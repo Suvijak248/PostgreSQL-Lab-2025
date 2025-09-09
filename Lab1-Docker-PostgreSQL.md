@@ -379,14 +379,11 @@ GRANT SELECT ON postgres_test_table TO lab_user;
 ```
 
 **บันทึกผลการทดลอง - Step 8:**
-```
-ใส่ Screenshot ของ:
-1. ผลการ ALTER USER commands
-2. ผลการรัน \dp test_permissions
-3. ผลการ GRANT commands
-```
+<img width="730" height="722" alt="image" src="https://github.com/user-attachments/assets/8d2eb5c1-2a56-49a0-ad2a-12a3530d95b2" />
+<img width="1044" height="541" alt="image" src="https://github.com/user-attachments/assets/2ec15d08-f8cf-4a6b-92ba-4d9a10b398a1" />
+
 **คำถาม
- ```
+
 Access Privileges   postgres=arwdDxtm/postgres มีความหมายอย่างไร
 
 
