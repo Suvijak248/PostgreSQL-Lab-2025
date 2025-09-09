@@ -387,7 +387,6 @@ GRANT SELECT ON postgres_test_table TO lab_user;
 Access Privileges   postgres=arwdDxtm/postgres มีความหมายอย่างไร
 
 
- ```
 ### Step 9: Schema Management และ Namespace
 
 ```sql
