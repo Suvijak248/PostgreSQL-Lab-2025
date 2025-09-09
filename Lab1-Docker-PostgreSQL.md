@@ -585,12 +585,8 @@ INSERT INTO test_permissions (name) VALUES ('Test by lab_user'); -- ทำไม
 ```
 
 **บันทึกผลการทดลอง - Step 11:**
-```
-ใส่ Screenshot ของ:
-1. ผลการเชื่อมต่อด้วย lab_user
-2. ผลการทดสอบสิทธิ์ต่างๆ
-3. ข้อความ error (ถ้ามี) เมื่อไม่มีสิทธิ์
-```
+<img width="1188" height="357" alt="image" src="https://github.com/user-attachments/assets/66189db4-9c61-454c-bd80-db21d45b6a0b" />
+
 
 ### Step 12: การจัดการ Volume และ Data Persistence
 
