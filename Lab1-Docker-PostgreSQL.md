@@ -319,6 +319,7 @@ WHERE r.rolname NOT LIKE 'pg_%';
 ```
 
 **บันทึกผลการทดลอง - Step 7:**
+
 <img width="786" height="652" alt="image" src="https://github.com/user-attachments/assets/4e23106d-6741-4f7f-b2b3-6f9c61fa97dc" />
 <img width="1049" height="370" alt="image" src="https://github.com/user-attachments/assets/1cd66d3a-5d72-408e-beb8-8173720a54fa" />
 
