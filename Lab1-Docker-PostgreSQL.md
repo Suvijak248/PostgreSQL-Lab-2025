@@ -641,9 +641,9 @@ docker volume inspect postgres-data
 ```
 
 **บันทึกผล Checkpoint 1:**
-```
-ใส่ Screenshot ของ resource usage และ volume information ที่นี่
-```
+<img width="1462" height="116" alt="image" src="https://github.com/user-attachments/assets/1bdca10f-063c-4687-8cdf-c0463b80e31f" />
+<img width="781" height="366" alt="image" src="https://github.com/user-attachments/assets/c6393969-7878-43b9-9e60-b0f03d656e1e" />
+
 
 ### Checkpoint 2: Database Performance และ Configuration
 ```sql
@@ -689,12 +689,15 @@ WHERE state = 'active';
 ```
 
 **บันทึกผล Checkpoint 2:**
-```
-ใส่ Screenshot ของ:
-1. Database statistics
-2. Memory configuration
-3. Active connections
-```
+1.Database statistics
+<img width="1307" height="405" alt="image" src="https://github.com/user-attachments/assets/dc121229-6ea7-4381-acc0-0cc6883ed64b" />
+
+2.Memory configuration
+<img width="801" height="435" alt="image" src="https://github.com/user-attachments/assets/2fb61a19-df13-4a66-b7b4-5710d24ba1c0" />
+
+3.Active connections
+<img width="656" height="238" alt="image" src="https://github.com/user-attachments/assets/804c7edf-f7e0-4bf6-b7d7-a352de6bcc1a" />
+
 
 ## การแก้ไขปัญหาเบื้องต้น
 
@@ -754,12 +757,11 @@ docker volume create postgres-data
 ```
 
 **ผลการทำแบบฝึกหัด 1:**
-```
-ใส่ Screenshot ของ:
-1. คำสั่งที่ใช้สร้าง container
-2. docker ps แสดง container ใหม่
-3. docker stats แสดงการใช้ resources
-```
+<img width="1523" height="104" alt="image" src="https://github.com/user-attachments/assets/b0e31853-7323-4d82-9bfc-4ae7bd957ad1" />
+<img width="1465" height="232" alt="image" src="https://github.com/user-attachments/assets/aa0465a6-0d3a-430b-8e18-80efb7463df2" />
+<img width="1471" height="270" alt="image" src="https://github.com/user-attachments/assets/46e14ead-cece-4742-a08d-d0e8619938bd" />
+
+
 
 ### แบบฝึกหัด 2: User Management และ Security
 **คำสั่ง**: สร้างระบบผู้ใช้ที่สมบูรณ์:
@@ -780,12 +782,9 @@ docker volume create postgres-data
 ```
 
 **ผลการทำแบบฝึกหัด 2:**
-```
-ใส่ Screenshot ของ:
-1. การสร้าง roles และ users
-2. ผลการรัน \du แสดงผู้ใช้ทั้งหมด
-3. ผลการทดสอบเชื่อมต่อด้วย user ต่างๆ
-```
+<img width="581" height="168" alt="image" src="https://github.com/user-attachments/assets/7fc1e798-65bf-4324-90a5-b3497e8e91db" />
+<img width="642" height="159" alt="image" src="https://github.com/user-attachments/assets/e9749555-2c13-420e-93f2-9cd651e483bf" />
+
 
 ### แบบฝึกหัด 3: Schema Design และ Complex Queries
 **คำสั่ง**: สร้างระบบฐานข้อมูลร้านค้าออนไลน์:
@@ -934,13 +933,10 @@ INSERT INTO ecommerce.order_items (order_id, product_id, quantity, price) VALUES
 ```
 
 **ผลการทำแบบฝึกหัด 3:**
-```
-ใส่ Screenshot ของ:
-1. โครงสร้าง schemas และ tables (\dn+, \dt ecommerce.*)
-2. ข้อมูลตัวอย่างในตารางต่างๆ
-3. ผลการรัน queries ที่สร้าง
-4. การวิเคราะห์ข้อมูลที่ได้
-```
+<img width="765" height="272" alt="image" src="https://github.com/user-attachments/assets/95c44619-c7f1-49b6-a07f-f1b5d02c6170" />
+<img width="1374" height="465" alt="image" src="https://github.com/user-attachments/assets/569c46c3-3052-452d-853f-d89af78d8777" />
+<img width="1141" height="433" alt="image" src="https://github.com/user-attachments/assets/6ddff339-c2bf-4191-b0cb-d5c61cfa442f" />
+
 
 
 ## การทดสอบความเข้าใจ
@@ -955,7 +951,21 @@ INSERT INTO ecommerce.order_items (order_id, product_id, quantity, price) VALUES
 
 **คำตอบ Quiz 1:**
 ```
-เขียนคำตอบที่นี่
+1. อธิบายความแตกต่างระหว่าง Named Volume และ Bind Mount ในบริบทของ PostgreSQL
+- Named Volume เป็นพื้นที่เก็บข้อมูลที่ Docker จัดการเองเก็บใน Docker’s storage location จะดูแลเรื่องสิทธิ์และ persistence ให้เอง
+- Bind Mount เป็นการเชื่อมต่อ folder/file บน host machine เข้ากับ container ตัว container จะเข้าถึงไฟล์เหมือนอยู่บน host จริง ๆเหมาะสำหรับการพัฒนาแบบต้องการแก้ไขไฟล์บน host แล้ว container เห็นการเปลี่ยนแปลงทันที
+2. เหตุใด shared_buffers จึงควรตั้งเป็น 25% ของ RAM?
+ลดการเข้าถึง disk บ่อย ๆ → เพิ่มประสิทธิภาพ read/writeไม่ใช้ memory มากเกินไปจน OS หรือ process ไม่พอใช้
+3. การใช้ Schema ช่วยในการจัดการฐานข้อมูลขนาดใหญ่อย่างไร?
+- แยก domain ของข้อมูล ทำให้จัดการได้ง่ายขึ้น 
+- ลดความซับซ้อนของ table name ไม่ชนกันแม้ table ชื่อเหมือนกันใน schema ต่างกัน
+- ทำให้การ backup, restore และ migration เป็นระบบระเบียบ
+4. อธิบายประโยชน์ของการใช้ Docker สำหรับ Database Development
+- Isolation แต่ละ database อยู่ใน container ของตัวเอง ไม่ชนกัน
+- ง่ายต่อการ setup สร้าง PostgreSQL พร้อม config ได้ทันที 
+- Portability สามารถย้าย container ไป host ใดก็ได้โดยไม่ต้องติดตั้ง PostgreSQL บน host
+- ConsistencyDevelopment / Testing / Production ใช้ environment เหมือนกัน ลดปัญหา “มันใช้ได้บนเครื่องฉัน”
+- Persistent Data ใช้ Named Volume ข้อมูลไม่หายแม้ container ถูกลบ
 ```
 
 
