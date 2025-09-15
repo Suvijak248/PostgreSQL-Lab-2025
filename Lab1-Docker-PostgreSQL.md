@@ -641,7 +641,9 @@ docker volume inspect postgres-data
 ```
 
 **บันทึกผล Checkpoint 1:**
+
 <img width="1462" height="116" alt="image" src="https://github.com/user-attachments/assets/1bdca10f-063c-4687-8cdf-c0463b80e31f" />
+
 <img width="781" height="366" alt="image" src="https://github.com/user-attachments/assets/c6393969-7878-43b9-9e60-b0f03d656e1e" />
 
 
@@ -690,12 +692,15 @@ WHERE state = 'active';
 
 **บันทึกผล Checkpoint 2:**
 1.Database statistics
+
 <img width="1307" height="405" alt="image" src="https://github.com/user-attachments/assets/dc121229-6ea7-4381-acc0-0cc6883ed64b" />
 
 2.Memory configuration
+
 <img width="801" height="435" alt="image" src="https://github.com/user-attachments/assets/2fb61a19-df13-4a66-b7b4-5710d24ba1c0" />
 
 3.Active connections
+
 <img width="656" height="238" alt="image" src="https://github.com/user-attachments/assets/804c7edf-f7e0-4bf6-b7d7-a352de6bcc1a" />
 
 
@@ -757,8 +762,11 @@ docker volume create postgres-data
 ```
 
 **ผลการทำแบบฝึกหัด 1:**
+
 <img width="1523" height="104" alt="image" src="https://github.com/user-attachments/assets/b0e31853-7323-4d82-9bfc-4ae7bd957ad1" />
+
 <img width="1465" height="232" alt="image" src="https://github.com/user-attachments/assets/aa0465a6-0d3a-430b-8e18-80efb7463df2" />
+
 <img width="1471" height="270" alt="image" src="https://github.com/user-attachments/assets/46e14ead-cece-4742-a08d-d0e8619938bd" />
 
 
@@ -782,7 +790,10 @@ docker volume create postgres-data
 ```
 
 **ผลการทำแบบฝึกหัด 2:**
+
 <img width="581" height="168" alt="image" src="https://github.com/user-attachments/assets/7fc1e798-65bf-4324-90a5-b3497e8e91db" />
+
+
 <img width="642" height="159" alt="image" src="https://github.com/user-attachments/assets/e9749555-2c13-420e-93f2-9cd651e483bf" />
 
 
@@ -934,7 +945,9 @@ INSERT INTO ecommerce.order_items (order_id, product_id, quantity, price) VALUES
 
 **ผลการทำแบบฝึกหัด 3:**
 <img width="765" height="272" alt="image" src="https://github.com/user-attachments/assets/95c44619-c7f1-49b6-a07f-f1b5d02c6170" />
+
 <img width="1374" height="465" alt="image" src="https://github.com/user-attachments/assets/569c46c3-3052-452d-853f-d89af78d8777" />
+
 <img width="1141" height="433" alt="image" src="https://github.com/user-attachments/assets/6ddff339-c2bf-4191-b0cb-d5c61cfa442f" />
 
 
